@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Warehouse</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+   <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="./css/global.css">
+   <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+   <section id="hero" class="hero">
+
+      <header class="header">
+         <div class="header__container container">
+            <div class="header__inner d-flex between align-center">
+               <a class="header__logo" href="index.html">
+                  <h1 class="header__logo-txt">Warehouse</h1>
+               </a>
+               <form class="header__form relative-p" action="action_page.php">
+                  <label>
+                     <input class="header__form-inp" type="text" placeholder="Enter your keybord">
+                  </label>
+                  <button class="header__form-btn" action="button">
+                     <i class='bx bx-search-alt-2'></i>
+                  </button>
+               </form>
+               <div class="header__account account">
+                  <a class="account__link" href="#"><i class='bx bx-user'></i></a>
+                  <a class="account__link" href="#"><i class='bx bx-heart'></i></a>
+                  <a class="account__link account__link--before relative-p" href="#"><i class='bx bx-shopping-bag'></i></a>
+                  <a class="account__link" href="#"><i class="bi bi-gear"></i></a>
+               </div>
+               <button class="header__menu d-md-none relative-p" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <i class='bx bx-menu'></i>
+                  <div class="header__menu-inner offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                     <div class="header__menu-x center">
+                        <i class="bi bi-x"></i>
+                     </div>
+                     <a class="header__menu-link header__menu-link--active" href="#">HOME <i class='bx bx-chevron-right'></i></a>
+                     <a class="header__menu-link" href="#">ALL DEMOS <i class='bx bx-chevron-right'></i></a>
+                     <a class="header__menu-link" href="#">PAGES <i class='bx bx-chevron-right'></i></a>  
+                     <a class="header__menu-link" href="#">CATEGORIES <i class='bx bx-chevron-right'></i></a>
+                     <a class="header__menu-link" href="#">BLOG <i class='bx bx-chevron-right'></i></a>
+                     
+                  </div>
+               </button>
+            </div>
+         </div>
+      </header>
+
+      <section class="header-nav">
+         <div class="header-nav__container container">
+            <div class="header-nav__inner">
+               <nav class="navigation">
+                  <ul class="header-nav__list d-flex center">
+                     <li class="header-nav__item header-nav__item--active">
+                        <a class="header-nav__link" href="#">
+                           HOME <i class='bx bx-chevron-down'></i>
+                        </a>
+                     </li>
+                     <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">
+                           ALL DEMOS <i class='bx bx-chevron-down'></i>
+                        </a>
+                     </li>
+                     <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">
+                           PAGES <i class='bx bx-chevron-down'></i>
+                        </a>
+                     </li>
+                     <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">
+                           CATEGORIES <i class='bx bx-chevron-down'></i>
+                        </a>
+                     </li>
+                     <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">
+                           BLOG <i class='bx bx-chevron-down'></i>
+                        </a>
+                     </li>
+                  </ul> 
+               </nav>
+            </div>
+         </div>
+      </section>
+
+      <section class="account-bottom">
+         <div class="container">
+            <div class="account-b d-md-none center">
+               <a class="account-b__link" href="#">
+                  <i class='bx bx-home'></i>
+                  Home
+               </a>
+               <a class="account-b__link" href="#">
+                  <i class='bx bx-heart'></i>
+                  Wishlist
+               </a>
+               <a class="account-b__link account-b__link--before" href="#">
+                  <i class='bx bx-shopping-bag'></i>
+                  Cart
+               </a>
+               <a class="account-b__link" href="#">
+                  <i class="bi bi-gear"></i>
+                  Settings
+               </a>
+               <a class="account-b__link" href="#hero">
+                  <i class='bx bxs-arrow-to-top'></i>
+                  On top
+               </a>
+            </div>
+         </div>
+      </section>
+
+      <section class="main">
+         <div class="main__inner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+               </div>
+               <div class="carousel-inner center relative-p">
+                  <div class="carousel-item active relative-p">
+                     <div class="main__slider-titles">
+                        <span class="main__slider-txt">From <sup>$</sup>2900</span>
+                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc">All‑screen design. Longest battery life ever in an NovaPhone 
+                        Fastest performance. Studio‑quality photos.</p>
+                        <a class="main__slider-btn" href="#">
+                           <i class="bi bi-bag-fill"></i> SHOP NOW
+                        </a>
+                     </div>
+                     <img class="main__img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-3_35382bde-054c-4c31-a610-76b28ce97330_2048x.jpg?v=1601621098" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <div class="main__slider-titles main__slider-titles2">
+                        <span class="main__slider-txt cl-primary">From <sup>$</sup>2900</span>
+                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc main__slider-desc2">Pros love iMac. So we created one just for you. It’s packed with the most powerful graphics and processors ever in a Mac, along with the most advanced storage, memory.</p>
+                        <a class="main__slider-btn bg-primary" href="#">
+                           <i class="bi bi-bag-fill"></i> SHOP NOW
+                        </a>
+                     </div>
+                     <img class="main__img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-1_66ffbc40-efeb-48a4-95d8-590eba9597fd_2048x.jpg?v=1601620725" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                     <div class="main__slider-titles">
+                        <span class="main__slider-txt">From <sup>$</sup>2900</span>
+                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc">All‑screen design. Longest battery life ever in an NovaPhone 
+                        Fastest performance. Studio‑quality photos.</p>
+                        <a class="main__slider-btn bg-orange" href="#">
+                           <i class="bi bi-bag-fill"></i> SHOP NOW
+                        </a>
+                     </div>
+                     <img class="main__img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/slider-show-2_341dac96-3ed1-4ce8-8343-daa4c6d8b224_2048x.jpg?v=1601621068" alt="...">
+                  </div>
+               </div>
+               <button class="carousel-control-prev main__slider-icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next main__slider-icon" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+               </button>
+            </div>
+         </div>
+     
+      </section>
+
+   </section>
+   
+</body>
+</html>

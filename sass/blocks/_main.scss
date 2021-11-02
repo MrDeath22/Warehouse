@@ -1,0 +1,144 @@
+body {
+   background-color: #F8F8F8;
+}
+
+.cl-primary {
+   color: $cl-primary !important;
+}
+
+.bg-primary {
+   background: $cl-primary !important;
+}
+
+.bg-orange {
+   background-color: #F8891C !important;
+}
+
+.main {
+
+   &__img {
+      width: 100%;
+      height: 100%;
+      margin-top: 60px;
+      transform: scale(1.2);
+      object-fit: contain;
+   }
+
+   &__slider {
+
+      &-titles {
+         @include center-absolute;
+         top: 30%;
+         left: 50%;
+         z-index: 5;
+      }
+
+      &-titles2 {
+         text-align: start;
+         top: 50%;
+         left: 28%;
+      }
+
+      &-txt {
+         font-weight: 900;
+         font-size: 30px;
+         margin-bottom: 14px;
+         color: #da465b;
+      }
+
+      &-title {
+         font-weight: 900;
+         font-size: 36px;
+         margin-bottom: 10px;
+      }
+
+      &-desc {
+         max-width: 550px;
+         font-weight: 300;
+         font-size: 18px;
+         margin-bottom: 30px;
+      }
+
+      &-desc2 {
+         max-width: 450px;
+         font-weight: normal;
+         font-size: 13px;
+      }
+
+      &-btn {
+         font-family: $font-roboto;
+         font-weight: 600;
+         font-size: 11px;
+         padding: 15px 40px;
+         border-radius: 40px;
+         color: #fff;
+         background-color: #da465b;
+         transition: background 0.4s ease;
+
+         &:hover {
+            color: #fff;
+            background-color: $cl-nav !important;
+         }
+
+         .bi {
+            margin-right: 8px;
+         }
+      }
+
+      &-icon {
+         top: 45%;
+         width: 5%;
+         height: 15%;
+         background-color: #000;
+      }
+   }
+}
+
+@include breakpoint-down($max-lg) {
+   .main__img {
+      transform: scale(1);
+   }
+   .main__slider-txt {
+      font-size: 24px;
+   }
+   .main__slider-title {
+      font-size: 30px;
+   }
+   .main__slider-desc {
+      font-size: 13px;
+   }
+}
+
+@include breakpoint-down(880px) {
+   .main__slider-titles {
+      top: 60%;
+   }
+   .main__slider-titles2 {
+      left: 40%;
+   }
+}
+
+@include breakpoint-down(630px) {
+   .main__img {
+      transform: scale(1.2);
+   }
+   .main__slider-txt {
+      font-size: 20px;
+   }
+   .main__slider-title {
+      font-size: 25px;
+   }
+   .main__slider-desc {
+      font-size: 12px;
+   }
+}
+
+@include breakpoint-down($max-xs) {
+   .main__slider-titles {
+      display: none;
+   }
+   .main__img {
+      height: 300px;
+      transform: scale(1.4);
+   }
+}

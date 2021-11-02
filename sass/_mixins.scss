@@ -1,0 +1,44 @@
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin breakpoint-down ($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up ($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin center-absolute {
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+@mixin font-body ($ft-family: $font-roboto,
+                  $ft-weight: 400,
+                  $ft-size: 16px,
+                  $ft-color: #000) {
+  
+  font-family: $ft-family;
+  font-weight: $ft-weight;
+  font-size: $ft-size;
+  color: $ft-color;
+}
+
+@mixin font-roboto ($ft-family: $font-roboto,
+              $ft-weight: 400,
+              $ft-size: 16px,
+              $ft-color: #000) {
+  
+  font-family: $ft-family;
+  font-weight: $ft-weight;
+  font-size: $ft-size;
+  color: $ft-color;
+}
