@@ -2019,4 +2019,16 @@ img {
   margin: 0;
   color: #666;
 }
+
+@media screen and (max-width: 576px) {
+  .footer__down-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  .footer__down-desc {
+    margin-bottom: 2em;
+  }
+}
 /*# sourceMappingURL=main.css.map */

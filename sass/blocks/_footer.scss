@@ -47,3 +47,12 @@
       color: #666;
    }
 }
+
+@include breakpoint-down($max-xs) {
+   .footer__down-inner {
+      flex-flow: column;
+   }
+   .footer__down-desc {
+      margin-bottom: 2em;
+   }
+}
