@@ -65,12 +65,57 @@
          &:not(:first-child) {
             margin-left: 20px;
          }
-      }
 
-      .bi {
-         position: relative;
-         bottom: 2px;
-         font-size: 24px !important;
+         &-list {
+            padding: 0 30px;
+            padding-top: 0;
+            padding-bottom: 20px;
+            transform: translate3d(-179.637px, 137px, 0px) !important;
+         }
+
+         &-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #e9e9e9;
+
+            &__link {
+               font-family: $font-roboto;
+               font-weight: 700;
+               font-size: 10px;
+               margin-right: 80px;
+               color: #666;
+
+               .bi {
+                  position: relative;
+                  top: 3px;
+                  left: 5px;
+                  font-size: 18px !important;
+                  margin-right: 1em;
+                  color: #666 !important;
+               }
+            }
+         }
+
+         &-currency {
+            margin-top: 14px;
+
+            &__txt {
+               display: block;
+               font-weight: 700;
+               font-size: 12px;
+               margin-bottom: 1em;
+            }
+
+            &__us {
+               font-weight: 700;
+               font-size: 10px;
+               margin-right: 1em;
+               color: #666;
+
+               &--active {
+                  color: $cl-primary;
+               }
+            }
+         }
       }
 
       .bx, .bi {
@@ -81,6 +126,12 @@
          &:hover {
             color: #E96568;
          }
+      }
+
+      .bi {
+         position: relative;
+         bottom: 2px;
+         font-size: 24px;
       }
    }
 

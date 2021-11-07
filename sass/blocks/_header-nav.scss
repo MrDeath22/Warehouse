@@ -32,7 +32,7 @@
 
 .account-bottom {
    position: fixed;
-   bottom: -22px;
+   bottom: -26px;
    left: 50%;
    width: 100%;
    transform: translate(-50%, -50%);
@@ -87,6 +87,20 @@
       &-p {
          position: relative;
          bottom: 47px;
+      }
+
+      &-fr {
+         margin: 0;
+
+         .dropdown-menu__link {
+            width: 220px !important;
+
+            &:last-child {
+               padding: 0;
+               margin: 0;
+               border-bottom: none;
+            }
+         }
       }
    }
 

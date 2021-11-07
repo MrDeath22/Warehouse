@@ -31,10 +31,63 @@
                   </button>
                </form>
                <div class="header__account account">
-                  <a class="account__link" href="#"><i class='bx bx-user'></i></a>
+                  <button class="account__link" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                     <i class='bx bx-user'></i>
+                  </button>
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                     <div class="modal-dialog">
+                       <div class="modal-content">
+                         <div class="modal-header">
+                           <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                           ...
+                         </div>
+                         <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Understood</button>
+                         </div>
+                       </div>
+                     </div>
+                  </div>
                   <a class="account__link" href="#"><i class='bx bx-heart'></i></a>
                   <a class="account__link account__link--before relative-p" href="#"><i class='bx bx-shopping-bag'></i></a>
-                  <a class="account__link" href="#"><i class="bi bi-gear"></i></a>
+                  <button class="account__link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i class="bi bi-gear"></i>
+                  </button>
+                  <ul class="dropdown-menu account__link-list">
+                     <li class="account__link-item">
+                        <button class="account__link-item__link" >
+                           <i class="bi bi-gear-wide-connected"></i>
+                           LOG IN
+                        </button>
+                     </li>
+                     <li class="account__link-item">
+                        <a class="account__link-item__link" href="#">
+                           <i class="bi bi-box-arrow-in-right"></i>
+                           REGISTER ACCOUNT
+                        </a>
+                     </li>
+                     <li class="account__link-item">
+                        <a class="account__link-item__link" href="#">
+                           <i class="bi bi-check-circle-fill"></i>
+                           CHECK OUT
+                        </a>
+                     </li>
+                     <li class="account__link-item">
+                        <a class="account__link-item__link" href="#">
+                           <i class="bi bi-heart-fill"></i>
+                           MY WISHLIST
+                        </a>
+                     </li>
+                     <div class="account__link-currency">
+                        <span class="account__link-currency__txt">CURRENCY</span>
+                        <span class="account__link-currency__us account__link-currency__us--active">USD</span>
+                        <span class="account__link-currency__us">EUR</span>
+                        <span class="account__link-currency__us">UZS</span>
+                     </div>
+                  </ul>
                </div>
                <button class="header__menu d-md-none relative-p" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                   <i class='bx bx-menu'></i>
@@ -47,7 +100,6 @@
                      <a class="header__menu-link" href="#">PAGES <i class='bx bx-chevron-right'></i></a>  
                      <a class="header__menu-link" href="#">CATEGORIES <i class='bx bx-chevron-right'></i></a>
                      <a class="header__menu-link" href="#">BLOG <i class='bx bx-chevron-right'></i></a>
-                     
                   </div>
                </button>
             </div>
@@ -60,14 +112,14 @@
                <nav class="navigation">
                   <ul class="header-nav__list d-flex center">
                      <li class="header-nav__item header-nav__item--active">
-                        <a class="header-nav__link" href="#">
+                        <button class="header-nav__link" href="#">
                            HOME
-                        </a>
+                        </button>
                      </li>
                      <li class="header-nav__item">
-                        <a class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <button class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                            ALL DEMOS <i class='bx bx-chevron-down'></i>
-                        </a>
+                        </button>
                         <ul class="dropdown-menu dropdown-menu__list">
                            <li class="dropdown-menu__item">
                               <b class="dropdown-menu__b">HOME PAGE ELECTRONIC</b>
@@ -90,9 +142,9 @@
                         </ul>
                      </li>
                      <li class="header-nav__item">
-                        <a class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                        <button class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                            PAGES <i class='bx bx-chevron-down'></i>
-                        </a>
+                        </button>
                         <ul class="dropdown-menu dropdown-menu__list">
                            <li class="dropdown-menu__item">
                               <b class="dropdown-menu__b">HOME PAGE ELECTRONIC</b>
@@ -114,14 +166,31 @@
                         </ul>
                      </li>
                      <li class="header-nav__item">
-                        <a class="header-nav__link" href="#">
+                        <button class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                            CATEGORIES <i class='bx bx-chevron-down'></i>
-                        </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu__list">
+                           <li class="dropdown-menu__item dropdown-menu__item-fr">
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                           </li>
+                        </ul>
                      </li>
                      <li class="header-nav__item">
-                        <a class="header-nav__link" href="#">
+                        <button class="header-nav__link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                            BLOG <i class='bx bx-chevron-down'></i>
-                        </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu__list">
+                           <li class="dropdown-menu__item dropdown-menu__item-fr">
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                              <a class="dropdown-menu__link" href="#">Home page electronic</a>
+                           </li>
+                        </ul>
                      </li>
                   </ul> 
                </nav>
@@ -168,10 +237,10 @@
                   <div class="carousel-item active relative-p">
                      <div class="main__slider-titles">
                         <span class="main__slider-txt">From <sup>$</sup>2900</span>
-                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
-                        <p class="main__slider-desc">All‑screen design. Longest battery life ever in an NovaPhone 
+                        <h2 class="main__slider-title main__slider-title__fr">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc main__slider-desc__fr">All‑screen design. Longest battery life ever in an NovaPhone 
                         Fastest performance. Studio‑quality photos.</p>
-                        <a class="main__slider-btn" href="#">
+                        <a class="main__slider-btn main__slider-btn__fr" href="#">
                            <i class="bi bi-bag-fill"></i> SHOP NOW
                         </a>
                      </div>
@@ -180,9 +249,9 @@
                   <div class="carousel-item">
                      <div class="main__slider-titles main__slider-titles2">
                         <span class="main__slider-txt cl-primary">From <sup>$</sup>2900</span>
-                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
-                        <p class="main__slider-desc main__slider-desc2">Pros love iMac. So we created one just for you. It’s packed with the most powerful graphics and processors ever in a Mac, along with the most advanced storage, memory.</p>
-                        <a class="main__slider-btn bg-primary" href="#">
+                        <h2 class="main__slider-title main__slider-title__sc">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc main__slider-desc2 main__slider-desc__sc">Pros love iMac. So we created one just for you. It’s packed with the most powerful graphics and processors ever in a Mac, along with the most advanced storage, memory.</p>
+                        <a class="main__slider-btn main__slider-btn__sc bg-primary" href="#">
                            <i class="bi bi-bag-fill"></i> SHOP NOW
                         </a>
                      </div>
@@ -190,11 +259,11 @@
                   </div>
                   <div class="carousel-item">
                      <div class="main__slider-titles">
-                        <span class="main__slider-txt">From <sup>$</sup>2900</span>
-                        <h2 class="main__slider-title">Vinove SmartPhone</h2>
-                        <p class="main__slider-desc">All‑screen design. Longest battery life ever in an NovaPhone 
+                        <span class="main__slider-txt main__slider-txt__th">From <sup>$</sup>2900</span>
+                        <h2 class="main__slider-title main__slider-title__th">Vinove SmartPhone</h2>
+                        <p class="main__slider-desc main__slider-desc__th">All‑screen design. Longest battery life ever in an NovaPhone 
                         Fastest performance. Studio‑quality photos.</p>
-                        <a class="main__slider-btn bg-orange" href="#">
+                        <a class="main__slider-btn main__slider-btn__th bg-orange" href="#">
                            <i class="bi bi-bag-fill"></i> SHOP NOW
                         </a>
                      </div>
@@ -215,6 +284,452 @@
       </section>
 
    </section>
+
+   <section class="shipping">
+      <div class="shipping__inner d-md-flex between">
+         <div class="shipping__mall col-md-3 col-sm-12">
+            <a class="shipping__mall-link shipping__mall-link__fr" href="#">
+               <img class="shipping__mall-img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/banner-1_23a53455-5829-4a88-88a8-7c7e99acd498_1920x.jpg?v=1601621441" alt="watch">
+            </a>
+         </div>
+         <div class="shipping__mall col-md-6 col-sm-12">
+            <a class="shipping__mall-link" href="#">
+               <img class="shipping__mall-img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/banner-2_45d90c4a-cc38-4cd1-9dd2-e5c748d85ded_1920x.jpg?v=1601621463" alt="watch">
+            </a>
+         </div>
+         <div class="shipping__mall col-md-3 col-sm-12">
+            <a class="shipping__mall-link shipping__mall-link__th" href="#">
+               <img class="shipping__mall-img" src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/banner-3_a8e10c28-e71f-4c67-89c7-c6042b332fe9_1920x.jpg?v=1601621484" alt="watch">
+            </a>
+         </div>
+      </div>
+      <div class="shipping__container container">
+         <ul class="shipping__list d-md-flex around">
+            <li class="shipping__item center">
+               <i class="bi bi-globe2"></i>
+               <h2 class="shipping__item-title">WORLDWIDE DELIVERY</h2>
+               <p class="shipping__item-desc">We work with the biggest delivery networks. It doesn't matter where in the world you are.</p>
+            </li>
+            <li class="shipping__item center">
+               <i class="bi bi-truck"></i>
+               <h2 class="shipping__item-title">WORLDWIDE DELIVERY</h2>
+               <p class="shipping__item-desc">We work with the biggest delivery networks. It doesn't matter where in the world you are.</p>
+            </li>
+            <li class="shipping__item center">
+               <i class="bi bi-wallet2"></i>
+               <h2 class="shipping__item-title">WORLDWIDE DELIVERY</h2>
+               <p class="shipping__item-desc">We work with the biggest delivery networks. It doesn't matter where in the world you are.</p>
+            </li>
+         </ul>
+      </div>
+   </section>
+
+   <section class="product">
+      <div class="product__container container">
+         <div class="product__inner">
+            <div class="product__titles center">
+               <h2 class="product__title">New Products</h2>
+               <p class="product__desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium. At Nulla id tincidunt ut sed semper vel Lorem condimentum ornare.</p>
+               <div class="product__btns">
+                  <button class="product__btn product__btn--active">ALL PRODUCT</button>
+                  <button class="product__btn">SMARTPHONE</button>
+                  <button class="product__btn">TABLET</button>
+                  <button class="product__btn">AUDIO</button>
+               </div>
+            </div>
+            <ul class="product__list col-12 row">
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__fr" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__sc" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__th" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__th" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__fr" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="product__item col-xs-12 col-sm-12 col-md-4">
+                  <div class="product__item-link product__item-link__sc" href="#">
+                     <div class="product__item-titles">
+                        <div class="product__item-like">
+                           <i class='bx bx-heart'></i>
+                           <i class='bx bx-search-alt-2'></i>
+                        </div>
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <div class="dots center">
+               <span class="dot dot--active"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+            </div>
+         </div>
+      </div>
+   </section> 
+
+   <aside class="banner">
+      <a class="banner__link" href="#">
+         <img src="https://cdn.shopify.com/s/files/1/0272/1493/8165/files/banner-4_e80c3d89-2275-40ea-b402-004015fc128f_1920x1920.jpg?v=1601622721" alt="phone">
+      </a>
+   </aside>
+
+   <section class="deal">
+      <div class="deal__container container">
+         <div class="deal__inner">
+            <h2 class="deal__title">Deals Of The Day</h2>
+            <ul class="deal__list d-flex between">
+               <li class="deal__item">
+                  <div class="deal__item-diver deal__item-diver__fr">
+                     <div class="deal__item-wrapper">
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">419</span>
+                           <span class="deal__item-time__sc">DAYS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">11</span>
+                           <span class="deal__item-time__sc">HOURS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">47</span>
+                           <span class="deal__item-time__sc">MINS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">33</span>
+                           <span class="deal__item-time__sc">SECS</span>
+                        </div>
+                     </div>
+                     <div class="product__item-like deal__item-like">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bx-search-alt-2'></i>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="deal__item-inner">
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+               <li class="deal__item">
+                  <div class="deal__item-diver deal__item-diver__sc">
+                     <div class="deal__item-wrapper">
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">419</span>
+                           <span class="deal__item-time__sc">DAYS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">11</span>
+                           <span class="deal__item-time__sc">HOURS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">47</span>
+                           <span class="deal__item-time__sc">MINS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">33</span>
+                           <span class="deal__item-time__sc">SECS</span>
+                        </div>
+                     </div>
+                     <div class="product__item-like deal__item-like">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bx-search-alt-2'></i>
+                     </div>
+                  </div>
+                  <div class="deal__item-inner">
+                     <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                     <div class="product__item-stars">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                     </div>
+                     <div>
+                        <span class="product__item-price">$223.00</span>
+                        <del class="product__item-price2">$685.00</del>
+                     </div>
+                     <a class="product__item-btn" href="#">
+                        <i class="bi bi-check2"></i> SELECT OPTION
+                     </a>
+                  </div>
+               </li>
+               <li class="deal__item">
+                  <div class="deal__item-diver deal__item-diver__th">
+                     <div class="deal__item-wrapper">
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">419</span>
+                           <span class="deal__item-time__sc">DAYS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">11</span>
+                           <span class="deal__item-time__sc">HOURS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">47</span>
+                           <span class="deal__item-time__sc">MINS</span>
+                        </div>
+                        <div class="deal__item-time">
+                           <span class="deal__item-time__fr">33</span>
+                           <span class="deal__item-time__sc">SECS</span>
+                        </div>
+                     </div>
+                     <div class="product__item-like deal__item-like">
+                        <i class='bx bx-heart'></i>
+                        <i class='bx bx-search-alt-2'></i>
+                     </div>
+                  </div>
+                  <div>
+                     <div class="deal__item-inner">
+                        <h3 class="product__item-title">Rimond Balo Stund Cum</h3>
+                        <div class="product__item-stars">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                        </div>
+                        <div>
+                           <span class="product__item-price">$223.00</span>
+                           <del class="product__item-price2">$685.00</del>
+                        </div>
+                        <a class="product__item-btn" href="#">
+                           <i class="bi bi-check2"></i> SELECT OPTION
+                        </a>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </section>
+
+   <section class="newsletter">
+      <div class="newsletter__container container">
+         <div class="newsletter__inner d-flex between align-center">
+            <div class="newsletter__social">
+               <a href="#" target="_blank"><i class='bx bxl-facebook'></i></a>
+               <a href="#" target="_blank"><i class='bx bxl-twitter'></i></a>
+               <a href="#" target="_blank"><i class='bx bxl-pinterest'></i></a>
+               <a href="#" target="_blank"><i class='bx bxl-vimeo'></i></a>
+               <a href="#" target="_blank"><i class='bx bxl-instagram'></i></a>
+            </div>
+            <h2 class="newsletter__form-title newsletter__title d-sm-none">NEWSLETTER</h2>
+            <form class="newsletter__form d-flex" action="example.php">
+               <h2 class="newsletter__form-title">NEWSLETTER</h2>
+               <label class="newsletter__form-label">
+                  <input class="newsletter__form-inp" type="email" name="email" placeholder="Enter your email">
+               </label>
+               <button class="newsletter__form-btn">SUBSCRIBE</button>
+            </form>
+         </div>
+      </div>
+   </section>
+
+   <footer class="footer">
+      <div class="footer__container container">
+         <div class="footer__inner">
+            <ul class="footer__list d-md-flex between">
+               <li class="footer__item">
+                  <span class="footer__item-title">CUSTOMER SERVICE</span>
+                  <a class="footer__item-link" href="#">Contact Us</a>
+                  <a class="footer__item-link" href="#">Help and advice</a>
+                  <a class="footer__item-link" href="#">Shipping & Returns</a>
+                  <a class="footer__item-link" href="#">Terms</a>
+                  <a class="footer__item-link" href="#">Refund Policy</a>
+               </li>
+               <li class="footer__item">
+                  <span class="footer__item-title">INFORMATION</span>
+                  <a class="footer__item-link" href="#">Contact Us</a>
+                  <a class="footer__item-link" href="#">Help and advice</a>
+                  <a class="footer__item-link" href="#">Shipping & Returns</a>
+                  <a class="footer__item-link" href="#">Terms</a>
+                  <a class="footer__item-link" href="#">Refund Policy</a>
+               </li>
+               <li class="footer__item">
+                  <span class="footer__item-title">ABOUT US</span>
+                  <a class="footer__item-link" href="#">Contact Us</a>
+                  <a class="footer__item-link" href="#">Help and advice</a>
+                  <a class="footer__item-link" href="#">Shipping & Returns</a>
+                  <a class="footer__item-link" href="#">Terms</a>
+                  <a class="footer__item-link" href="#">Refund Policy</a>
+               </li>
+               <li class="footer__item">
+                  <span class="footer__item-title">CONTACT US</span>
+                  <span class="footer__item-link">
+                     (+612) 2531 5600
+                  </span>
+                  <span class="footer__item-link">
+                     vinova@gmail.com
+                  </span>
+                  <span class="footer__item-link">
+                     PO Box 1622 Visaosang Street West
+                  </span>
+                  <span class="footer__item-link">
+                     Opening Hours : 8.00AM - 21.00AM
+                  </span>
+               </li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer__down">
+         <div class="container d-flex between">
+            <p class="footer__down-desc">Copyright © 2020 Vinovathemes. All rights reserved.</p>
+            <div class="footer__down-img">
+
+            </div>
+         </div>
+      </div>
+   </footer>
+
    
 </body>
 </html>

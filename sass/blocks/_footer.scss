@@ -1,0 +1,49 @@
+.footer__inner {
+   padding: 50px 0;
+}
+
+.footer__list {
+   @include list-unstyled
+}
+
+.footer__item {
+
+   &-title {
+      display: block;
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 1em;
+   }
+
+   &-link {
+      display: block;
+      font-family: $font-roboto;
+      font-size: 13px;
+      margin-bottom: 8px;
+      color: #666;
+      transition: color 0.2s ease;
+   }
+}
+
+@include breakpoint-down($max-sm) {
+   .footer__item {
+      padding: 0 10px;
+      margin-bottom: 2em;
+   }
+   .footer__down {
+      margin-bottom: 55px;
+   }
+}
+
+.footer__down {
+   padding: 30px 0;
+   background: #f0f0f0;
+
+   &-desc {
+      font-family: $font-roboto;
+      font-weight: 600;
+      font-size: 12px;
+      margin: 0;
+      color: #666;
+   }
+}

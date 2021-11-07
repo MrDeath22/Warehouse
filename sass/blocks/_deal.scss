@@ -1,0 +1,196 @@
+.deal {
+   padding: 50px 0;
+
+   &__title {
+      font-weight: 600;
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 2em;
+   }
+
+   &__list {
+      @include list-unstyled
+   }
+
+   &__item {
+      position: relative;
+
+      &-diver {
+         position: relative;
+         width: 370px;
+         height: 370px;
+         margin-bottom: 2em;
+         background-size: contain;
+         transition: all 0.3s ease;
+         cursor: pointer;
+
+         &__fr {
+            background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/1_e1430135-e18d-49f4-b4f4-6241295c4c82_470x.jpg?v=1573182864');
+
+            &:hover {
+               background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/6_5322ea78-198c-4ddf-be4a-53d5282e6364_470x.jpg?v=1573182864');
+            }
+         }
+
+         &__sc {
+            background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/3_1e01e241-0041-49c5-b3e2-65b70b7ae119_470x.jpg?v=1573183327');
+
+            &:hover {
+               background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/8_470x.jpg?v=1573183327');
+            }
+         }
+
+         &__th {
+            background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/8_9da9f451-69b8-45eb-b5dd-8d261a4aae6b_470x.jpg?v=1573184521');
+
+            &:hover {
+               background-image: url('https://cdn.shopify.com/s/files/1/0272/1493/8165/products/13_470x.jpg?v=1573184521');
+            }
+         }
+      }
+
+      &-like {
+         position: absolute;
+         bottom: -5%;
+         left: 35%;
+         transform: translateY(50px);
+         transition: all 0.3s ease;
+         opacity: 0;
+
+         .bx {
+            &::before {
+               padding-left: 11px;
+            }
+         }
+      }
+
+      &:hover &-like {
+         transform: translateY(0);
+         opacity: 1;
+      }
+
+      &-wrapper {
+         position: absolute;
+         top: 20%;
+         right: 5%;
+      }
+
+      &-time {
+         width: 50px;
+         height: 50px;
+         text-align: center;
+         margin-bottom: 8px;
+         border-radius: 5px;
+         background: #fff;
+         box-shadow: 2px 2px 0px 0px #FF6B57;
+
+         &__fr {
+            font-weight: 900;
+            font-size: 13px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid #aaa;
+         }
+
+         &__sc {
+            display: block;
+            font-weight: 500;
+            font-size: 10px;
+            margin-top: 5px;
+            color: #9e9e9e;
+         }
+      }
+         
+      &-inner {
+         text-align: center !important;
+      }
+   }
+}
+
+@include breakpoint-down($max-lg) {
+   .deal__list {
+      justify-content: space-evenly !important;
+   }
+   .deal__item-diver {
+      width: 315px;
+      height: 315px;
+   }
+   .deal__item-wrapper {
+      top: 15%;
+   }
+}
+
+@include breakpoint-down($max-md) {
+   .deal__item-diver {
+      width: 280px;
+      height: 280px;
+   }
+   .deal__item-wrapper {
+      top: 10%;
+   }
+}
+
+@include breakpoint-down(910px) {
+   .deal__item-diver {
+      width: 240px;
+      height: 250px;
+   }
+   .deal__item-wrapper {
+      top: 5%;
+   }
+}
+
+@include breakpoint-down($max-sm) {
+   .deal__item:last-child {
+      display: none;
+   }
+   .deal__item-diver {
+      width: 260px;
+      height: 260px;
+   }
+   .deal__item-wrapper {
+      top: 6%;
+   }
+}
+
+@include breakpoint-down($max-xs) {
+   .deal__item:nth-child(2) {
+      display: none;
+   }
+   .deal__item-diver {
+      width: 470px;
+      height: 470px;
+   }
+   .deal__item-wrapper {
+      top: 25%;
+   }
+}
+
+@include breakpoint-down(490px) {
+   .deal__item-diver {
+      width: 450px;
+      height: 450px;
+   }
+   .deal__item-wrapper {
+      top: 25%;
+   }
+}
+
+@include breakpoint-down(465px) {
+   .deal__item-diver {
+      width: 390px;
+      height: 390px;
+   }
+   .deal__item-wrapper {
+      top: 20%;
+   }
+}
+
+@include breakpoint-down(390px) {
+   .deal__item-diver {
+      width: 330px;
+      height: 330px;
+   }
+   .deal__item-wrapper {
+      top: 15%;
+   }
+}

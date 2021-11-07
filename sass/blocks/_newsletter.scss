@@ -1,0 +1,104 @@
+.newsletter {
+   padding: 40px 0;
+   background: $cl-primary;
+
+   &__social {
+      position: relative;
+      top: 5px;
+
+      .bx {
+         font-size: 24px;
+         margin-right: 15px;
+         color: #fff;
+         transition: color 0.2s ease;
+
+         &:hover {
+            color: #FD6767;
+         }
+      }
+   }
+
+   &__form {
+      position: relative;
+      max-width: 370px;
+      width: 100%;
+      height: 46px;
+      border-radius: 40px;
+      background: #fff;
+
+      &-title {
+         position: absolute;
+         top: 30%;
+         left: -50%;
+         display: inline-block;
+         font-weight: 700;
+         font-size: 18px;
+         margin-bottom: 0;
+         color: #fff;
+      }
+
+      &-inp {
+         position: absolute;
+         width: 100%;
+         height: 46px;
+         font-family: $font-roboto;
+         padding-left: 15px;
+         padding-right: 100px;
+         border-radius: 40px;
+         border: none;
+
+         &::placeholder {
+            font-size: 14px;
+         }
+      }
+      
+      &-btn {
+         position: absolute;
+         top: 2px;
+         right: 2px;
+         font-family: $font-roboto;
+         font-weight: 700;
+         font-size: 11px;
+         padding: 15px 17px;
+         border-radius: 40px;
+         color: #fff;
+         background: $cl-primary;
+      }
+   }
+}
+
+@include breakpoint-down(815px) {
+   .newsletter__inner {
+      display: block !important;
+      text-align: center;
+   }
+   .newsletter__social {
+      margin-bottom: 2em;
+   }
+   .newsletter__form {
+      left: 10%;
+      margin: 0 auto;
+
+     &-title {
+        left: -36%;
+     }
+   }
+}
+
+@include breakpoint-down($max-xs) {
+   .newsletter__form {
+      left: 0;
+      max-width: 100%;
+      margin: 0;
+
+     &-title {
+        position: relative;
+        left: 0%;
+        display: none;
+     }
+   }
+   .newsletter__title {
+      display: block;
+      margin-bottom: 1em;
+   }
+}

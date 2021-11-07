@@ -1,0 +1,289 @@
+.product {
+   padding: 80px 0;
+
+   &__title {
+      font-weight: 600;
+      font-size: 26px;
+      margin-bottom: 16px;
+   }
+
+   &__desc {
+      max-width: 550px;
+      font-family: $font-roboto;
+      font-size: 13px;
+      margin: 0 auto;
+      margin-bottom: 3em;
+      color: $cl-p;
+   }
+
+   &__btn {
+      width: 140px;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 12px 25px;
+      margin: 0 3px;
+      margin-bottom: 4em;
+      border-radius: 40px;
+      background: $bg-btn;
+      transition: color 0.3s ease,
+      background 0.3s ease;
+
+      &--active {
+         color: #fff;
+         background: $cl-primary;
+      }
+
+      &:hover {
+         color: #fff;
+         background: $cl-primary;
+      }
+   }
+
+   &__item {
+      position: relative;
+      width: 355px;
+      height: 355px;
+      margin-bottom: 20px;
+
+      &:not(:last-child) {
+         padding-right: 20px;
+         margin-right: 20px;
+      }
+
+      &:hover &-titles {
+         opacity: 1;
+      }
+
+      &-link {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 355px;
+         height: 355px;
+         text-align: center;
+         background-repeat: no-repeat !important;
+         background-size: contain !important;
+         background: #fff;
+         transition: all 0.3s ease;
+
+         &:hover {
+            height: 530px;
+            border: 15px solid #fff;
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.69);
+            z-index: 100;
+         }
+
+         &__fr {
+            background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/15_85ddb99d-27d8-4425-9640-ca6307daade2_425x425.jpg?v=1603253183");
+
+            &:hover {
+               background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/7_76af7ca0-5d26-48dd-b8cb-184a8285540d_425x425.jpg?v=1603252686");
+            }
+         }
+
+         &__sc {
+            background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/9_903bd6e5-4773-4b43-8e5c-053061f35e15_425x425.jpg?v=1603253186");
+
+            &:hover {
+               background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/14_fc556a81-dc84-4b29-9069-875d9906f6ea_425x425.jpg?v=1603253113");
+            }
+         }
+
+         &__th {
+            background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/11_5d731e89-ceba-4b43-9056-67afab96339a_425x425.jpg?v=1603252915");
+
+            &:hover {
+               background-image: url("https://cdn.shopify.com/s/files/1/0272/1493/8165/products/8_5cc396ca-c787-4fec-b733-c6752de51a94_425x425.jpg?v=1603252729");
+            }
+         }
+      }
+
+      &-like {
+         margin-bottom: 35px;
+
+         .bx {
+            width: 45px;
+            height: 45px;
+            font-size: 22px;
+            padding-top: 12px;
+            margin: 0 5px;
+            border-radius: 50%;
+            color: #8e8e8e;
+            background: #fff;
+            transition: color 0.3s ease,
+            background 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+               color: #fff;
+               background: $cl-primary;
+            }
+         }
+      }
+
+      &-titles {
+         position: absolute;
+         left: 22%;
+         bottom: 5%;
+         opacity: 0;
+         z-index: 5;
+         transition: opacity 0.3s ease;
+      }
+
+      &-title {
+         font-weight: 500;
+         font-size: 13px;
+         margin-bottom: 1em;
+         color: #444;
+      }
+
+      &-stars {
+         .bx {
+            font-size: 12px;
+            margin: -2.5px;
+            color: #ddd;
+         }
+      }
+
+      &-price {
+         font-weight: 700;
+         font-size: 13px;
+         margin-bottom: 1em;
+         color: $cl-txt;
+      }
+
+      &-price2 {
+         font-weight: 600;
+         font-size: 11px;
+         color: #ddd;
+      }
+
+      &-btn {
+         font-family: $font-roboto;
+         font-weight: 600;
+         font-size: 11px;
+         padding: 8px 40px;
+         padding-top: 6px;
+         border-radius: 40px;
+         color: $cl-txt;
+         background: $bg-btn;
+         transition: color 0.3s ease,
+         background 0.3s ease;
+
+         .bi {
+            position: relative;
+            top: 3px;
+            right: 4px;
+            font-size: 18px;
+         }
+
+         &:hover {
+            color: #fff;
+            background: $cl-primary;
+         }
+      }
+   }
+}
+
+.dot {
+   width: 20px;
+   height: 20px;
+   margin: 0 3px;
+   border-radius: 50%;
+   background: #d4d4d4;
+   transition: background 0.3s ease;
+   cursor: pointer;
+
+   &:hover {
+      background: #FD6666;
+   }
+
+   &--active {
+      background: #FD6666;
+   }
+}
+
+@include breakpoint-down($max-lg) {
+   .product__list {
+      justify-content: center;
+   }
+   .product__item-link {
+      width: 290px;
+      height: 290px;
+
+      &:hover {
+         height: 460px;
+      }
+   }
+   .product__item-titles {
+      left: 18%;
+   }
+}
+
+@include breakpoint-down($max-md) {
+   .product__list {
+      margin: 0;
+   }
+}
+
+@include breakpoint-down(816px) {
+   .product__list {
+      justify-content: center;
+      padding: 0 10px;
+   }
+   .product__item-link {
+      width: 100%;
+      height: 360px;
+   }
+   .product__item-titles {
+      left: 23%;
+   }
+}
+
+@include breakpoint-down($max-sm) {
+   .product__item-link:hover {
+      height: 530px;
+   }
+}
+
+@include breakpoint-down(400px) {
+   .product__item-link {
+      width: 90%;
+      height: 330px;
+   }
+   .product__item-link {
+      width: 100%;
+      height: 330px;
+
+      &:hover {
+         height: 500px;
+      }
+   }
+}
+
+.banner {
+
+   &__link {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+         position: absolute;
+         top: -75%;
+         right: 32%;
+         width: 150%;
+         height: 80%;
+         content: "";
+         background: #ffffff39;
+         transform: skewY(
+         -50deg);
+         transition: all .35s ease;
+         z-index: 1;
+      }
+
+      &:hover::before {
+         right: -150%
+      }
+   }
+}
